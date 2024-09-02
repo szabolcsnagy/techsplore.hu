@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build:css": "npx tailwindcss build -i src/styles.css -o public/styles.css",
+    "build:js": "tsc",
     "dev": "nodemon --watch 'public/**/*' -e html --exec 'yarn build:css'"
   },
   "keywords": [],
@@ -13,11 +14,15 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.40",
-    "tailwindcss": "^3.4.7"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@types/react": "^18.3.4",
+    "@types/react-dom": "^18.3.0",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.6"
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "typescript": "^5.5.4"
   }
 }

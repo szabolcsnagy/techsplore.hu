@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "#/*": ["./*"]
+    },
+    "lib": ["DOM", "ES2015"],
+    "jsx": "react",
+    "target": "ES2016",
+    "outDir": "./public",
+    "esModuleInterop": true,
+    "module": "preserve"
+    // "moduleResolution": "NodeNext"
+  }
+}

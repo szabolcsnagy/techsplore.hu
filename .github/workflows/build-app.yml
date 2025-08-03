@@ -33,19 +33,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Tailwind CSS
-        run: npm run build:css
-
-      - name: Build ES modules with tsc
-        run: npm run build:js
+      - name: Build React Router App (Pre-render)
+        run: npm run build
 
       - name: Upload artifact
         # @see https://github.com/actions/upload-pages-artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
-          # Upload the public directory
-          path: public
+          # Upload the client directory (no server build)
+          path: build/client
           retention-days: 1
 
   deploy:
